@@ -31,8 +31,8 @@ class Gameboard {
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
         if (!(
-          readCell(new Coord(i, j)) == HIT ||
-          readCell(new Coord(i, j)) == MISSED
+          this.readCell(new Coord(i, j)) == HIT ||
+          this.readCell(new Coord(i, j)) == MISSED
         )) {
           count++;
         }
@@ -97,10 +97,7 @@ class Gameboard {
     const directions = ["vertical", "horizontal"];
     for (let len of lengths) {
       while (ship === null) {
-        coord = new Coord(
-          Math.floor(Math.random() * this.size),
-          Math.floor(Math.random() * this.size),
-        );
+        coord = Coord.random(this.size);
 
         ship = this.checkShipAvail(
           len,
