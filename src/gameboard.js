@@ -22,8 +22,15 @@ class Gameboard {
   readCell(coord) {
     if (!coord.isValid(this.size)) {
       return null;
+    } else if (
+      this.#board[coord.y][coord.x] == EMTY ||
+      this.#board[coord.y][coord.x] == HIT ||
+      this.#board[coord.y][coord.x] == MISSED
+    ) {
+      return this.#board[coord.y][coord.x];
+    } else {
+      return SHIP;
     }
-    return this.#board[coord.y][coord.x];
   }
 
   hitableCellCount() {

@@ -1,3 +1,4 @@
 import "./styles.css";
-
-alert("Javascript is working");
+import "./dom.js";
+import { Player } from "./player.js";
+import { Coord } from "./Coord.js";

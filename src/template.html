@@ -3,9 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Battleship</title>
   </head>
   <body>
-    <p>The template is working</p>
+    <h1>Battleship</h1>
+    <p>Enter your names and press start</p>
+    <p>Click on the board to attack. First player is player 1</p>
+    <form id="name-form">
+      <label>
+        Player 1 name:
+        <input
+          type="text"
+          name="player1_name"
+          placeholder="Player 1"
+          required
+        />
+      </label>
+      <label>
+        Player 2 name:
+        <input
+          type="text"
+          name="player2_name"
+          placeholder="Player 2"
+          required
+        />
+      </label>
+      <button type="submit">Start game / Reset</button>
+    </form>
+    <button id="reset">Reset</button>
+    <button id="ship">Place Random Ship</button>
+    <dialog id="win"></dialog>
+    <div class="container">
+      <div>
+        <h2 class="board_0">Board 0</h2>
+        <div class="board_0"></div>
+      </div>
+      <div>
+        <h2 class="board_1">Board 1</h2>
+        <div class="board_1"></div>
+      </div>
+    </div>
   </body>
 </html>
